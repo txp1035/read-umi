@@ -1,4 +1,4 @@
-allFile: 718  readFile: 70 percent: 9.75%
+allFile: 767  readFile: 102 percent: 13.30%
 - .editorconfig
 - .fatherrc.base.ts
 - .gitattributes

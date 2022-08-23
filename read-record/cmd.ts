@@ -37,11 +37,11 @@ function getDirTree(beforePath: string,options?:{isRead:boolean}): object {
       return [item, { ignore: true }]
     } catch (error) {
       let isRead = false
+      allFile = allFile + 1
       if (isReadDir) {
         isRead = true
         readFile = readFile + 1
       } else {
-        allFile = allFile + 1
         if (getIsRead(itemPath)) {
           isRead = true
           readFile = readFile + 1
