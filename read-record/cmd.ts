@@ -86,5 +86,5 @@ fs.writeFileSync(path.join(__dirname, 'tree.json'), JSON.stringify(tree))
 const percent = (readFile/allFile*100).toFixed(2)
 const statisticalPanel = `allFile: ${allFile}  readFile: ${readFile} percent: ${percent}%
 `
-fs.writeFileSync(path.join(__dirname, 'statistical.md'), statisticalPanel + getMd(tree, ['']))
+fs.writeFileSync(path.join(__dirname, 'statistical.md'), statisticalPanel +'\n'+ getMd(tree, ['']))
 
