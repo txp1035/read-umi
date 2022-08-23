@@ -1,0 +1,76 @@
+{
+  "name": "@umijs/bundler-vite",
+  "version": "4.0.11",
+  "description": "@umijs/bundler-vite",
+  "homepage": "https://github.com/umijs/umi/tree/master/packages/bundler-vite#readme",
+  "bugs": "https://github.com/umijs/umi/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/umi"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "bundler-vite": "bin/bundler-vite.js"
+  },
+  "files": [
+    "compiled",
+    "dist"
+  ],
+  "scripts": {
+    "build": "umi-scripts father build",
+    "build:deps": "umi-scripts bundleDeps",
+    "dev": "umi-scripts father dev",
+    "test": "umi-scripts jest-turbo"
+  },
+  "dependencies": {
+    "@svgr/core": "6.2.1",
+    "@umijs/bundler-utils": "4.0.11",
+    "@umijs/utils": "4.0.11",
+    "@vitejs/plugin-react": "1.2.0",
+    "postcss-preset-env": "7.5.0",
+    "rollup-plugin-visualizer": "5.6.0"
+  },
+  "devDependencies": {
+    "@types/caniuse-lite": "1.0.1",
+    "@types/rollup-plugin-visualizer": "4.2.1",
+    "@types/svgo": "2.6.3",
+    "@vitejs/plugin-legacy": "1.7.1",
+    "caniuse-lite": "1.0.30001327",
+    "rollup": "2.70.1",
+    "rollup-plugin-copy": "3.4.0",
+    "vite": "2.9.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "authors": [
+    "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)"
+  ],
+  "compiledConfig": {
+    "deps": [
+      "@vitejs/plugin-legacy",
+      "caniuse-lite",
+      "rollup-plugin-copy",
+      "vite"
+    ],
+    "externals": {
+      "esbuild": "@umijs/bundler-utils/compiled/esbuild",
+      "express": "@umijs/bundler-utils/compiled/express",
+      "fs-extra": "@umijs/utils/compiled/fs-extra",
+      "glob": "@umijs/utils/compiled/glob",
+      "less": "@umijs/bundler-utils/compiled/less",
+      "resolve": "@umijs/utils/compiled/resolve",
+      "vite": "$$LOCAL"
+    },
+    "extraDtsDeps": [
+      "rollup"
+    ],
+    "extraDtsExternals": [
+      "esbuild",
+      "foo",
+      "fs-extra"
+    ]
+  }
+}
