@@ -1,4 +1,4 @@
-allFile: 767  readFile: 102 percent: 13.30%
+allFile: 772  readFile: 104 percent: 13.47%
 
 - .editorconfig
 - .fatherrc.base.ts
@@ -248,9 +248,12 @@ allFile: 767  readFile: 102 percent: 13.30%
           - package.json
     - client
       - client
+        - client.d.ts
         - client.js
+      - constants.d.ts
       - constants.js
       - utils
+        - formatWebpackMessages.d.ts
         - formatWebpackMessages.js
     - package.json
     - scripts
@@ -909,7 +912,9 @@ allFile: 767  readFile: 102 percent: 13.30%
       - umi.js
     - client
       - client
+        - plugin.d.ts
         - plugin.js
+        - utils.d.ts
         - utils.js
     - eslint.js
     - index.d.ts
