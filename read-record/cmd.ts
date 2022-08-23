@@ -58,13 +58,10 @@ function getIsRead(paths: string) {
     fs.lstatSync(paths).isDirectory()
     const all = fs.readdirSync(paths)
     const isRead = !!all.includes(`${tagName}.md`)
-    if (isRead) {
-      console.log(paths)
-    }
     return isRead
   } catch (error) {
     const str = fs.readFileSync(paths, { encoding: 'utf-8' })
-    const start = [`^# ${tagName}`, `^// ${tagName}`, `^<!-- ${tagName}`]
+    const start = [`^# ${tagName}`, `^// ${tagName}`, `^<!-- ${tagName}`,`^{\n  "${tagName}"`]
     let isRead = false;
     start.forEach(element => {
       if (new RegExp(element).test(str)) {

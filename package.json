@@ -1,4 +1,5 @@
 {
+  "READCODE": "主包",
   "private": true,
   "scripts": {
     "bootstrap": "umi-scripts bootstrap",
